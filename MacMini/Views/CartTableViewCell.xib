@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="96" id="KGk-i7-Jjw" customClass="CartTableViewCell" customModule="MacMini" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="96"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="96"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cheese_3" translatesAutoresizingMaskIntoConstraints="NO" id="V8U-UJ-GmJ">
+                        <rect key="frame" x="5" y="6" width="120" height="85"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="V8U-UJ-GmJ" secondAttribute="height" multiplier="24:17" id="2cx-mX-lZy"/>
+                            <constraint firstAttribute="width" secondItem="V8U-UJ-GmJ" secondAttribute="height" multiplier="24:17" id="NUA-2Q-DtH"/>
+                            <constraint firstAttribute="height" constant="85" id="T71-6a-QUs"/>
+                            <constraint firstAttribute="width" constant="120" id="nhY-Ru-F98"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Продукт" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Yl-Z4-Eni">
+                        <rect key="frame" x="193" y="18" width="68" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Цена" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C6N-Bc-ZDI">
+                        <rect key="frame" x="193" y="58" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="V8U-UJ-GmJ" secondAttribute="bottom" constant="5" id="0C5-kK-chN"/>
+                    <constraint firstItem="C6N-Bc-ZDI" firstAttribute="top" secondItem="4Yl-Z4-Eni" secondAttribute="bottom" constant="19" id="2pF-hl-TOc"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="C6N-Bc-ZDI" secondAttribute="bottom" constant="6" id="5pc-9m-Qdy"/>
+                    <constraint firstItem="V8U-UJ-GmJ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="6" id="5w5-3a-XQ4"/>
+                    <constraint firstItem="C6N-Bc-ZDI" firstAttribute="leading" secondItem="V8U-UJ-GmJ" secondAttribute="trailing" constant="68" id="6wg-KL-1qq"/>
+                    <constraint firstItem="4Yl-Z4-Eni" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="18" id="Zxn-0o-aQj"/>
+                    <constraint firstItem="4Yl-Z4-Eni" firstAttribute="leading" secondItem="V8U-UJ-GmJ" secondAttribute="trailing" constant="68" id="brT-sb-gof"/>
+                    <constraint firstItem="V8U-UJ-GmJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="zAB-Ij-W6u"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="cartImage" destination="V8U-UJ-GmJ" id="oLD-W2-2aJ"/>
+                <outlet property="cartProductPrice" destination="C6N-Bc-ZDI" id="2oQ-EW-3yJ"/>
+                <outlet property="cartProductTitle" destination="4Yl-Z4-Eni" id="d2N-LW-ZvJ"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="133.92857142857142"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="cheese_3" width="500" height="376"/>
+    </resources>
+</document>
