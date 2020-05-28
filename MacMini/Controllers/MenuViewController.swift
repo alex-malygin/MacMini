@@ -36,7 +36,10 @@ class MenuViewController: UICollectionViewController {
 				vc.product = productSelected
 			}
 		}
+		
 	}
+	
+	
 
     
     // MARK: UICollectionViewDataSource

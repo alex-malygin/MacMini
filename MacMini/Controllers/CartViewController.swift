@@ -12,13 +12,8 @@ class CartViewController: UITableViewController {
 	
 	@IBOutlet weak var totalLabel: UILabel!
 	
-	var cartProduct: [ModelProduct] = [
-		ModelProduct(title: "Чикен-ролл", imageName: "chicken-roll", price: 10),
-		ModelProduct(title: "Чизбургер", imageName: "cheese_3", price: 22),
-		ModelProduct(title: "Кола", imageName: "coke_0,25", price: 5),
-		ModelProduct(title: "Картошка фри", imageName: "FrenchFriesMiddle", price: 12),
-		ModelProduct(title: "Куриные крылышки", imageName: "kurinye-krylyshki", price: 33)
-	]
+	var cartProduct: [ModelProduct] = []
+	
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -52,6 +47,7 @@ class CartViewController: UITableViewController {
 		
 		cell.product = cartProduct[indexPath.row]
 		totalLabel.text = "Всего: $\(sum)"
+		
 		
 		return cell
 	}

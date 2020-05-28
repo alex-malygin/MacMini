@@ -15,7 +15,6 @@ class MenuCollectionViewCell: UICollectionViewCell {
 	@IBOutlet weak var nameProductLabel: UILabel!
 	@IBOutlet weak var priceProductLabel: UILabel!
 	
-	
 	var product: ModelProduct? {
 		didSet {
 			
@@ -45,8 +44,17 @@ class MenuCollectionViewCell: UICollectionViewCell {
 
 	@IBAction func addProduct(_ sender: Any) {
 		
+		let cartVC = CartViewController()
 		
+		var cartArray = cartVC.cartProduct
+		
+		cartArray.append(product!)
+		cartVC.tableView.reloadData()
+		print(cartArray)
+
 	}
+	
+	
 }
 
 
