@@ -12,7 +12,10 @@ class CartViewController: UITableViewController {
 	
 	@IBOutlet weak var totalLabel: UILabel!
 	
-	var cartProduct: [ModelProduct] = []
+	var cartProduct: [ModelProduct] = [
+		ModelProduct(title: "Чикен-ролл", imageName: "chicken-roll", price: 10),
+		ModelProduct(title: "Чизбургер", imageName: "cheese_3", price: 22)
+	]
 	
 	
 	override func viewDidLoad() {
