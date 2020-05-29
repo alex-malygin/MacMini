@@ -1,0 +1,6 @@
+framework module Pods_MacMini {
+  umbrella header "Pods-MacMini-umbrella.h"
+
+  export *
+  module * { export * }
+}
