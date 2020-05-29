@@ -7,30 +7,39 @@
 //
 
 import UIKit
+import RealmSwift
 
 class CartViewController: UITableViewController {
 	
+	let realm = try! Realm(configuration: .defaultConfiguration)
+	
 	@IBOutlet weak var totalLabel: UILabel!
 	
-	var cartProduct: [ModelProduct] = [
-		ModelProduct(title: "Чикен-ролл", imageName: "chicken-roll", price: 10),
-		ModelProduct(title: "Чизбургер", imageName: "cheese_3", price: 22)
-	]
 	
+	var cartProduct: Results<CartModel>?
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
+		
+		
 		tableView.register(UINib(nibName: "CartTableViewCell", bundle: nil), forCellReuseIdentifier: "tableCell")
 		
 	}
+	override func viewWillAppear(_ animated: Bool) {
+		loadProduct()
+	}
 	
+	func loadProduct() {
+		cartProduct = realm.objects(CartModel.self)
+		tableView.reloadData()
+	}
 	
 	// MARK: - Table view data source
 	
 	override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		// #warning Incomplete implementation, return the number of rows
-		return cartProduct.count
+		return cartProduct?.count ?? 1
 	}
 	
 	
@@ -39,18 +48,25 @@ class CartViewController: UITableViewController {
 		
 		var sum = 0
 		
-		for priceTotal in cartProduct {
+		if let nubmer = cartProduct {
 			
-			let total = priceTotal.price
+			for priceTotal in nubmer {
+				
+				
+				let total = priceTotal.price
+				
+				sum += total
+				
+				print(sum)
+			}
 			
-			sum += total
 			
-			print(sum)
+		} else {
+			print("Doesn’t contain a number")
 		}
 		
-		cell.product = cartProduct[indexPath.row]
+		cell.cartProduct = cartProduct?[indexPath.row]
 		totalLabel.text = "Всего: $\(sum)"
-		
 		
 		return cell
 	}
@@ -61,10 +77,25 @@ class CartViewController: UITableViewController {
 	
 	override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
 		if editingStyle == .delete {
-       print("Deleted")
-       self.cartProduct.remove(at: indexPath.row)
+			print("Deleted")
+			
+			if let item = cartProduct?[indexPath.row] {
+					
+					do {
+						
+						try realm.write {
+							realm.delete(item)
+						}
+						
+					} catch {
+						print(error)
+					}
+				}
+			
+			
+			
 			tableView.reloadData()
-    }
+		}
 	}
 	
 }

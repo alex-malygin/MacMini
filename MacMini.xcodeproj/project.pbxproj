@@ -3,11 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		1F2D033A247E93CD000518D8 /* ModelProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2D0339247E93CD000518D8 /* ModelProduct.swift */; };
+		1F4700752481306200CDC020 /* CartModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4700742481306200CDC020 /* CartModel.swift */; };
 		1F753D9D247ED1B500339539 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F753D9C247ED1B500339539 /* CartViewController.swift */; };
 		1F753DA0247ED20600339539 /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F753D9E247ED20600339539 /* CartTableViewCell.swift */; };
 		1F753DA1247ED20600339539 /* CartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F753D9F247ED20600339539 /* CartTableViewCell.xib */; };
@@ -20,10 +21,12 @@
 		1FAC674E247C33E10068BB3E /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAC674D247C33E10068BB3E /* MenuViewController.swift */; };
 		1FC4EF91247D3D84000E9161 /* MenuCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC4EF8F247D3D84000E9161 /* MenuCollectionViewCell.swift */; };
 		1FC4EF92247D3D84000E9161 /* MenuCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FC4EF90247D3D84000E9161 /* MenuCollectionViewCell.xib */; };
+		77CBF86E80022F3B071B4C8A /* Pods_MacMini.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 363D00AC6FA2AA1E15C7E9CF /* Pods_MacMini.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1F2D0339247E93CD000518D8 /* ModelProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelProduct.swift; sourceTree = "<group>"; };
+		1F4700742481306200CDC020 /* CartModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartModel.swift; sourceTree = "<group>"; };
 		1F753D9C247ED1B500339539 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		1F753D9E247ED20600339539 /* CartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
 		1F753D9F247ED20600339539 /* CartTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartTableViewCell.xib; sourceTree = "<group>"; };
@@ -38,6 +41,9 @@
 		1FAC674D247C33E10068BB3E /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		1FC4EF8F247D3D84000E9161 /* MenuCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCollectionViewCell.swift; sourceTree = "<group>"; };
 		1FC4EF90247D3D84000E9161 /* MenuCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuCollectionViewCell.xib; sourceTree = "<group>"; };
+		363D00AC6FA2AA1E15C7E9CF /* Pods_MacMini.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MacMini.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		89978E942A00D47271029522 /* Pods-MacMini.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacMini.debug.xcconfig"; path = "Target Support Files/Pods-MacMini/Pods-MacMini.debug.xcconfig"; sourceTree = "<group>"; };
+		BF574AD5767B59C8FC0A86EF /* Pods-MacMini.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacMini.release.xcconfig"; path = "Target Support Files/Pods-MacMini/Pods-MacMini.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,16 +51,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77CBF86E80022F3B071B4C8A /* Pods_MacMini.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B67B011DCA5CBAFF267CEDF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				89978E942A00D47271029522 /* Pods-MacMini.debug.xcconfig */,
+				BF574AD5767B59C8FC0A86EF /* Pods-MacMini.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		1F2D033B247E9A57000518D8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				1F2D0339247E93CD000518D8 /* ModelProduct.swift */,
+				1F4700742481306200CDC020 /* CartModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -86,6 +103,8 @@
 			children = (
 				1FAC6735247C32DB0068BB3E /* MacMini */,
 				1FAC6734247C32DB0068BB3E /* Products */,
+				0B67B011DCA5CBAFF267CEDF /* Pods */,
+				6323294BF72AAEAF3CBB70A5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -112,6 +131,14 @@
 			path = MacMini;
 			sourceTree = "<group>";
 		};
+		6323294BF72AAEAF3CBB70A5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				363D00AC6FA2AA1E15C7E9CF /* Pods_MacMini.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -119,9 +146,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1FAC674A247C32DD0068BB3E /* Build configuration list for PBXNativeTarget "MacMini" */;
 			buildPhases = (
+				E80AA1202A36F4E54E196D17 /* [CP] Check Pods Manifest.lock */,
 				1FAC672F247C32DB0068BB3E /* Sources */,
 				1FAC6730247C32DB0068BB3E /* Frameworks */,
 				1FAC6731247C32DB0068BB3E /* Resources */,
+				6F49A8CE8151A579376CB387 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -180,11 +209,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6F49A8CE8151A579376CB387 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MacMini/Pods-MacMini-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MacMini/Pods-MacMini-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MacMini/Pods-MacMini-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E80AA1202A36F4E54E196D17 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MacMini-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1FAC672F247C32DB0068BB3E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F4700752481306200CDC020 /* CartModel.swift in Sources */,
 				1FAC673B247C32DB0068BB3E /* ProductViewController.swift in Sources */,
 				1F2D033A247E93CD000518D8 /* ModelProduct.swift in Sources */,
 				1F753D9D247ED1B500339539 /* CartViewController.swift in Sources */,
@@ -334,6 +406,7 @@
 		};
 		1FAC674B247C32DD0068BB3E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 89978E942A00D47271029522 /* Pods-MacMini.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -353,6 +426,7 @@
 		};
 		1FAC674C247C32DD0068BB3E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF574AD5767B59C8FC0A86EF /* Pods-MacMini.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

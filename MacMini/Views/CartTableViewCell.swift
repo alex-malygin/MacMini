@@ -14,14 +14,14 @@ class CartTableViewCell: UITableViewCell {
 	@IBOutlet weak var cartProductTitle: UILabel!
 	@IBOutlet weak var cartProductPrice: UILabel!
 	
-	var product: ModelProduct? {
+	var cartProduct: CartModel? {
 		didSet {
 			
-			if let image = product?.imageName {
+			if let image = cartProduct?.imageName {
 				cartImage.image = UIImage(named: image)
 			}
-			cartProductTitle.text = product?.title
-			cartProductPrice.text = "$\(product?.price ?? 0)"
+			cartProductTitle.text = cartProduct?.title
+			cartProductPrice.text = "$\(cartProduct?.price ?? 0)"
 			
 		}
 	}
