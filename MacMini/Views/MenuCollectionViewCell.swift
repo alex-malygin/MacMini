@@ -11,7 +11,7 @@ import RealmSwift
 
 class MenuCollectionViewCell: UICollectionViewCell {
 	
-	let realm = try! Realm(configuration: .defaultConfiguration)
+	
 	
 	@IBOutlet weak var cellView: UIView!
 	@IBOutlet weak var imageProduct: UIImageView!
@@ -30,7 +30,7 @@ class MenuCollectionViewCell: UICollectionViewCell {
 		}
 	}
 	
-	var cartProduct = CartModel()
+	
 	
 	
 	override func awakeFromNib() {
@@ -48,23 +48,6 @@ class MenuCollectionViewCell: UICollectionViewCell {
 		self.layer.masksToBounds = false
 	}
 	
-	@IBAction func addProduct(_ sender: Any) {
-		
-		cartProduct.title = menuProduct?.title as! String
-		cartProduct.imageName = menuProduct?.imageName as! String
-		cartProduct.price = menuProduct?.price as! Int
-		
-		do {
-			
-			try realm.write{
-				realm.add(cartProduct)
-			}
-			
-		} catch {
-			
-		}
-		
-	}
 	
 	
 }

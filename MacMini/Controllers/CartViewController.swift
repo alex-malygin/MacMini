@@ -26,7 +26,15 @@ class CartViewController: UITableViewController {
 		tableView.register(UINib(nibName: "CartTableViewCell", bundle: nil), forCellReuseIdentifier: "tableCell")
 		
 	}
+	
+	
 	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
+		loadProduct()
+	}
+	
+	override func viewWillDisappear(_ animated: Bool) {
+		super.viewWillDisappear(animated)
 		loadProduct()
 	}
 	
@@ -52,14 +60,12 @@ class CartViewController: UITableViewController {
 			
 			for priceTotal in nubmer {
 				
-				
-				let total = priceTotal.price
+				let total = priceTotal.price * priceTotal.sumProduct
 				
 				sum += total
 				
 				print(sum)
 			}
-			
 			
 		} else {
 			print("Doesn’t contain a number")
@@ -67,6 +73,7 @@ class CartViewController: UITableViewController {
 		
 		cell.cartProduct = cartProduct?[indexPath.row]
 		totalLabel.text = "Всего: $\(sum)"
+		
 		
 		return cell
 	}
@@ -80,21 +87,21 @@ class CartViewController: UITableViewController {
 			print("Deleted")
 			
 			if let item = cartProduct?[indexPath.row] {
+				
+				do {
 					
-					do {
-						
-						try realm.write {
-							realm.delete(item)
-						}
-						
-					} catch {
-						print(error)
+					try realm.write() {
+						realm.delete(item)
 					}
+					
+				} catch {
+					print("Error delete \(error)")
 				}
-			
-			
+			}
 			
 			tableView.reloadData()
+		} else if editingStyle == .insert {
+			
 		}
 	}
 	

@@ -10,7 +10,7 @@ import Foundation
 
 struct ModelProduct {
 	
-	var title: String
-	var imageName: String
-	var price: Int
+	var title: String?
+	var imageName: String?
+	var price: Int?
 }

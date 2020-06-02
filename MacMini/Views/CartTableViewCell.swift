@@ -13,6 +13,7 @@ class CartTableViewCell: UITableViewCell {
 	@IBOutlet weak var cartImage: UIImageView!
 	@IBOutlet weak var cartProductTitle: UILabel!
 	@IBOutlet weak var cartProductPrice: UILabel!
+	@IBOutlet weak var sumProduct: UILabel!
 	
 	var cartProduct: CartModel? {
 		didSet {
@@ -22,6 +23,7 @@ class CartTableViewCell: UITableViewCell {
 			}
 			cartProductTitle.text = cartProduct?.title
 			cartProductPrice.text = "$\(cartProduct?.price ?? 0)"
+			sumProduct.text = "\(cartProduct?.sumProduct ?? 0) шт"
 			
 		}
 	}

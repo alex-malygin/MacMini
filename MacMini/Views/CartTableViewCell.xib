@@ -26,13 +26,20 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Продукт" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Yl-Z4-Eni">
-                        <rect key="frame" x="193" y="18" width="68" height="21"/>
+                        <rect key="frame" x="157" y="19" width="68" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Цена" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C6N-Bc-ZDI">
-                        <rect key="frame" x="193" y="58" width="42" height="21"/>
+                        <rect key="frame" x="157" y="64" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1 шт." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X8Z-po-niH">
+                        <rect key="frame" x="262" y="38" width="38" height="21"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -40,12 +47,12 @@
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="V8U-UJ-GmJ" secondAttribute="bottom" constant="5" id="0C5-kK-chN"/>
-                    <constraint firstItem="C6N-Bc-ZDI" firstAttribute="top" secondItem="4Yl-Z4-Eni" secondAttribute="bottom" constant="19" id="2pF-hl-TOc"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="C6N-Bc-ZDI" secondAttribute="bottom" constant="6" id="5pc-9m-Qdy"/>
+                    <constraint firstItem="C6N-Bc-ZDI" firstAttribute="top" secondItem="4Yl-Z4-Eni" secondAttribute="bottom" constant="24" id="2pF-hl-TOc"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="C6N-Bc-ZDI" secondAttribute="bottom" id="5pc-9m-Qdy"/>
                     <constraint firstItem="V8U-UJ-GmJ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="6" id="5w5-3a-XQ4"/>
-                    <constraint firstItem="C6N-Bc-ZDI" firstAttribute="leading" secondItem="V8U-UJ-GmJ" secondAttribute="trailing" constant="68" id="6wg-KL-1qq"/>
-                    <constraint firstItem="4Yl-Z4-Eni" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="18" id="Zxn-0o-aQj"/>
-                    <constraint firstItem="4Yl-Z4-Eni" firstAttribute="leading" secondItem="V8U-UJ-GmJ" secondAttribute="trailing" constant="68" id="brT-sb-gof"/>
+                    <constraint firstItem="C6N-Bc-ZDI" firstAttribute="leading" secondItem="V8U-UJ-GmJ" secondAttribute="trailing" constant="32" id="6wg-KL-1qq"/>
+                    <constraint firstItem="4Yl-Z4-Eni" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="19" id="Zxn-0o-aQj"/>
+                    <constraint firstItem="4Yl-Z4-Eni" firstAttribute="leading" secondItem="V8U-UJ-GmJ" secondAttribute="trailing" constant="32" id="brT-sb-gof"/>
                     <constraint firstItem="V8U-UJ-GmJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="zAB-Ij-W6u"/>
                 </constraints>
             </tableViewCellContentView>
@@ -54,6 +61,7 @@
                 <outlet property="cartImage" destination="V8U-UJ-GmJ" id="oLD-W2-2aJ"/>
                 <outlet property="cartProductPrice" destination="C6N-Bc-ZDI" id="2oQ-EW-3yJ"/>
                 <outlet property="cartProductTitle" destination="4Yl-Z4-Eni" id="d2N-LW-ZvJ"/>
+                <outlet property="sumProduct" destination="X8Z-po-niH" id="PNY-F3-AqK"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="133.92857142857142"/>
         </tableViewCell>

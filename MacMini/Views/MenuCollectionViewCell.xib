@@ -10,14 +10,14 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="gTV-IL-0wX" customClass="MenuCollectionViewCell" customModule="MacMini" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="170" height="215"/>
+            <rect key="frame" x="0.0" y="0.0" width="170" height="185"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="170" height="215"/>
+                <rect key="frame" x="0.0" y="0.0" width="170" height="185"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eym-vt-WMg">
-                        <rect key="frame" x="0.0" y="0.0" width="170" height="207"/>
+                        <rect key="frame" x="0.0" y="0.0" width="170" height="177"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cola" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ey1-s2-ejH">
                                 <rect key="frame" x="8" y="123" width="154" height="15"/>
@@ -40,31 +40,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wbD-3q-Xmv">
-                                <rect key="frame" x="20" y="175" width="130" height="24"/>
-                                <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="wbD-3q-Xmv" secondAttribute="height" multiplier="65:12" id="5NK-mo-kIA"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                <state key="normal" title="Добавить в корзину">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="addProduct:" destination="gTV-IL-0wX" eventType="touchUpInside" id="fjb-id-3Na"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="AdA-4A-AgZ" secondAttribute="trailing" constant="22" id="2dp-CI-kLf"/>
-                            <constraint firstAttribute="bottom" secondItem="wbD-3q-Xmv" secondAttribute="bottom" constant="8" id="3QX-Sj-6qq"/>
                             <constraint firstItem="AdA-4A-AgZ" firstAttribute="top" secondItem="eym-vt-WMg" secondAttribute="top" constant="6" id="6TK-MC-x5I"/>
-                            <constraint firstAttribute="trailing" secondItem="wbD-3q-Xmv" secondAttribute="trailing" constant="20" id="EaQ-hv-pJe"/>
-                            <constraint firstItem="wbD-3q-Xmv" firstAttribute="leading" secondItem="eym-vt-WMg" secondAttribute="leading" constant="20" id="Jra-6A-epw"/>
                             <constraint firstItem="2P6-UN-AVz" firstAttribute="top" secondItem="Ey1-s2-ejH" secondAttribute="bottom" constant="8" id="McU-rW-GM4"/>
                             <constraint firstAttribute="trailing" secondItem="Ey1-s2-ejH" secondAttribute="trailing" constant="8" id="NfQ-Ml-ZGf"/>
                             <constraint firstItem="Ey1-s2-ejH" firstAttribute="leading" secondItem="eym-vt-WMg" secondAttribute="leading" constant="8" id="USf-W2-TvO"/>
-                            <constraint firstAttribute="height" constant="207" id="aED-bP-VYD"/>
+                            <constraint firstAttribute="height" constant="177" id="Ypc-yH-6N7"/>
                             <constraint firstItem="2P6-UN-AVz" firstAttribute="leading" secondItem="eym-vt-WMg" secondAttribute="leading" constant="20" id="gdv-Cv-Jdw"/>
                             <constraint firstAttribute="trailing" secondItem="2P6-UN-AVz" secondAttribute="trailing" constant="20" id="h6y-w3-KRj"/>
                             <constraint firstAttribute="width" constant="170" id="pIg-oE-Goh"/>
@@ -81,14 +64,14 @@
                 <constraint firstAttribute="bottom" secondItem="eym-vt-WMg" secondAttribute="bottom" constant="8" id="Ufo-Va-zyC"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
-            <size key="customSize" width="176" height="215"/>
+            <size key="customSize" width="176" height="185"/>
             <connections>
                 <outlet property="cellView" destination="eym-vt-WMg" id="1Qp-KN-zAy"/>
                 <outlet property="imageProduct" destination="AdA-4A-AgZ" id="amU-Hz-ZGP"/>
                 <outlet property="nameProductLabel" destination="Ey1-s2-ejH" id="jFF-iM-BMv"/>
                 <outlet property="priceProductLabel" destination="2P6-UN-AVz" id="GWF-hz-TIk"/>
             </connections>
-            <point key="canvasLocation" x="228.98550724637684" y="164.39732142857142"/>
+            <point key="canvasLocation" x="228.98550724637684" y="154.35267857142856"/>
         </collectionViewCell>
     </objects>
     <resources>

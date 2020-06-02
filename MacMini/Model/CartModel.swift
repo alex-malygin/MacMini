@@ -13,6 +13,7 @@ class CartModel: Object {
 	
 	@objc dynamic var title: String = ""
 	@objc dynamic var imageName: String = ""
-	@objc dynamic var price = Int()
+	@objc dynamic var price: Int = 0
+	@objc dynamic var sumProduct: Int = 0
 	
 }
