@@ -11,21 +11,13 @@ import UIKit
 
 class MenuViewController: UICollectionViewController {
 	
-	var products: [ModelProduct] = [
-		
-		ModelProduct(title: "Чикен-ролл", imageName: "chicken-roll", price: 10),
-		ModelProduct(title: "Чизбургер", imageName: "cheese_3", price: 22),
-		ModelProduct(title: "Кола", imageName: "coke_0,25", price: 5),
-		ModelProduct(title: "Картошка фри", imageName: "FrenchFriesMiddle", price: 12),
-		ModelProduct(title: "Куриные крылышки", imageName: "kurinye-krylyshki", price: 33),
-		ModelProduct(title: "Латте", imageName: "late", price: 45),
-		ModelProduct(title: "Макфлури карамель", imageName: "makflurri-karamel", price: 8)
-	]
+	var products = [ModelProduct]()
 	
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
+		fetchProduct()
 		collectionView.register(UINib(nibName: "MenuCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "Cell")
 		
 	}
@@ -38,6 +30,19 @@ class MenuViewController: UICollectionViewController {
 			}
 		}
 		
+	}
+	
+	func fetchProduct(){
+		Network.shared.fetchProduct { (res) in
+			switch res {
+			case .failure(let error):
+						print("Error to fetch menu: ", error)
+			case .success(let product):
+				self.products = product
+				self.collectionView.reloadData()
+	
+			}
+		}
 	}
 	
 	// MARK: UICollectionViewDataSource
